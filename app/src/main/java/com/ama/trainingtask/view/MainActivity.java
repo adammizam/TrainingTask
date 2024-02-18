@@ -90,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        logoutImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UserManager.getInstance(MainActivity.this).logout();
+            }
+        });
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
