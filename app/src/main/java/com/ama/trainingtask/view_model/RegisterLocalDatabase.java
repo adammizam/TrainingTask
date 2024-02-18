@@ -53,35 +53,10 @@ public class RegisterLocalDatabase extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    /**
-     * Returns all the data from database
-     * @return
-     */
-    public Cursor getData(){
+    public Cursor getDataUser(String email){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_NAME;
-        Cursor data = db.rawQuery(query, null);
-        return data;
-    }
-
-    public Cursor getItemID(String registerEmail,){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_REGISTER_ID + " = '" + registerID + "'";
-        Cursor data = db.rawQuery(query, null);
-        return data;
-    }
-
-    public void deleteRegister(String registerId, String userId){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-                + COLUMN_REGISTER_ID + " = '" + registerId + "'" +
-                " AND " + COLUMN_REGISTER_USER_ID + " = '" + userId + "'";
-        db.execSQL(query);
-    }
-
-    public void deleteTableRegister(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_NAME ;
-        db.execSQL(query);
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_REGISTER_EMAIL + " = '" +
+                email + "'";
+        return db.rawQuery(query, null);
     }
 }

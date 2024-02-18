@@ -27,19 +27,23 @@
             android:textColor="@color/blue"/>
 
         <EditText
+            android:id="@+id/edtUsernameReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"/>
         <EditText
+            android:id="@+id/edtEmailReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"/>
         <EditText
+            android:id="@+id/edtPasswordReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"/>
         <Button
+            android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

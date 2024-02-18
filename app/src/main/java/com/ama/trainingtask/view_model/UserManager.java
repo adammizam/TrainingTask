@@ -14,6 +14,7 @@ public class UserManager {
      * The Store data from User Information
      */
     private static final String SHARED_PREF_NAME = "userToken";
+    private static final String KEY_USER_ID = "user_id";
     private static final String KEY_NAME = "user_name";
     private static final String KEY_EMAIL = "user_email";
     private static final String KEY_PASSWORD = "user_password";
@@ -41,6 +42,7 @@ public class UserManager {
     public void userLogin(UserModel user) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_USER_ID, user.getUserId());
         editor.putString(KEY_NAME, user.getName());
         editor.putString(KEY_EMAIL, user.getEmail());
         editor.putString(KEY_PASSWORD, user.getPassword());
@@ -59,6 +61,7 @@ public class UserManager {
     public UserModel getUser() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new UserModel(
+                sharedPreferences.getString(KEY_USER_ID, null),
                 sharedPreferences.getString(KEY_NAME, null),
                 sharedPreferences.getString(KEY_EMAIL, null),
                 sharedPreferences.getString(KEY_PASSWORD, null)

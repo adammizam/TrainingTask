@@ -11,26 +11,30 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:src="@drawable/Notelogo"/>
+        android:src="@drawable/notelogo"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"/>
+        android:hint="Email"
+        android:id="@+id/edtEmail"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"/>
+        android:hint="Password"
+        android:id="@+id/edtPassword"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Login"
-        android:backgroundTint="@color/blue"/>
+        android:backgroundTint="@color/blue"
+        android:id="@+id/btnLogin"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register Now-->"
         android:textColor="@color/blue"
-        android:gravity="end"/>
+        android:gravity="end"
+        android:id="@+id/txtRegister"/>
 
 </LinearLayout>

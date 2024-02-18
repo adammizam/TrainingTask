@@ -2,23 +2,24 @@ package com.ama.trainingtask.model;
 
 public class UserModel {
 
-    private String email, password, name;
+    private String userId, email, password, name;
 
     public UserModel() {
     }
 
-    public UserModel(String name, String email, String password) {
-        this.name = name;
+    public UserModel(String userId, String email, String password, String name) {
+        this.userId = userId;
         this.email = email;
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
@@ -35,5 +36,13 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

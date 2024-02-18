@@ -31,6 +31,7 @@
                 android:textSize="26dp"/>
 
             <ImageView
+                android:id="@+id/logoutImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/logout"
@@ -44,6 +45,7 @@
             android:background="@color/blue"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNote"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="20dp"/>

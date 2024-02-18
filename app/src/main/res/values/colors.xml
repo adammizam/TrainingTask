@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF2196F3</color>
     <color name="save">#66ED88</color>
-    <color name="cancel">#FA91C8</color>
+    <color name="delete">#FA91C8</color>
+    <color name="cancel">#6DBEEA</color>
 </resources>
