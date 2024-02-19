@@ -27,7 +27,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/blue"
                 android:gravity="center"
-                android:text="Note App"
+                android:text="Note"
                 android:textSize="26dp"/>
 
             <ImageView
